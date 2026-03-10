@@ -1963,40 +1963,42 @@
 
         // Book Service Function
         function bookService(service) {
-            // Calendly URL map — one event type per service
+            const CAL = 'https://calendly.com/alexsimone-gordon';
+
+            // Calendly URL map — update CAL above if your username changes
             const calendlyUrls = {
                 // Special Education
-                'Free Discovery Call':        'https://calendly.com/alexsimone-gordon/free-consultation',
-                'Special Ed Tier 1':          'https://calendly.com/alexsimone-gordon/iep-audit-review-session',
-                'Special Ed Tier 2':          'https://calendly.com/alexsimone-gordon/special-education-consultation-60-min',
-                'Special Ed Tier 3':          'https://calendly.com/alexsimone-gordon/special-education-consultation-60-min',
-                'Special Ed Tier 4':          'https://calendly.com/alexsimone-gordon/special-education-consultation-60-min',
-                'Family Workshop':            'https://calendly.com/alexsimone-gordon/free-consultation',
-                'Community Webinar':          'https://calendly.com/alexsimone-gordon/free-consultation',
+                'Free Discovery Call':        `${CAL}/free-consultation`,
+                'Special Ed Tier 1':          `${CAL}/iep-audit-review-session`,
+                'Special Ed Tier 2':          `${CAL}/special-education-consultation-60-min`,
+                'Special Ed Tier 3':          `${CAL}/special-education-consultation-60-min`,
+                'Special Ed Tier 4':          `${CAL}/special-education-consultation-60-min`,
+                'Family Workshop':            `${CAL}/free-consultation`,
+                'Community Webinar':          `${CAL}/free-consultation`,
 
                 // Instructional Design / Corporate
-                'ID Discovery Call':          'https://calendly.com/alexsimone-gordon/free-consultation',
-                'Training Module':            'https://calendly.com/alexsimone-gordon/instructional-design-consult',
-                'Live Training':              'https://calendly.com/alexsimone-gordon/instructional-design-consult',
-                'Curriculum Design':          'https://calendly.com/alexsimone-gordon/instructional-design-consult',
-                'Facilitator Coaching':       'https://calendly.com/alexsimone-gordon/instructional-design-consult',
-                'Program Consultation':       'https://calendly.com/alexsimone-gordon/instructional-design-consult',
-                'Retainer':                   'https://calendly.com/alexsimone-gordon/instructional-design-consult',
-                'Writing Editing':            'https://calendly.com/alexsimone-gordon/instructional-design-consult',
-                'Zoom Production':            'https://calendly.com/alexsimone-gordon/instructional-design-consult',
+                'ID Discovery Call':          `${CAL}/free-consultation`,
+                'Training Module':            `${CAL}/instructional-design-consult`,
+                'Live Training':              `${CAL}/instructional-design-consult`,
+                'Curriculum Design':          `${CAL}/instructional-design-consult`,
+                'Facilitator Coaching':       `${CAL}/instructional-design-consult`,
+                'Program Consultation':       `${CAL}/instructional-design-consult`,
+                'Retainer':                   `${CAL}/instructional-design-consult`,
+                'Writing Editing':            `${CAL}/instructional-design-consult`,
+                'Zoom Production':            `${CAL}/instructional-design-consult`,
 
                 // Tarot / Spiritual
-                'The Initiation':             'https://calendly.com/alexsimone-gordon/tarot-reading-30-min',
-                'The Exploration':            'https://calendly.com/alexsimone-gordon/tarot-reading-the-exploration-60-min-clone',
-                'The Illumination':           'https://calendly.com/alexsimone-gordon/tarot-reading-the-exploration-60-min-clone',
-                'Couples Reading':            'https://calendly.com/alexsimone-gordon/tarot-reading-30-min-clone',
-                'Tarot Package':              'https://calendly.com/alexsimone-gordon/free-consultation',
-                'Moon Circle':                'https://calendly.com/alexsimone-gordon/free-consultation',
-                'Community Event':            'https://calendly.com/alexsimone-gordon/free-consultation',
-                'Group Reading':              'https://calendly.com/alexsimone-gordon/free-consultation',
+                'The Initiation':             `${CAL}/tarot-reading-30-min`,
+                'The Exploration':            `${CAL}/tarot-reading-the-exploration-60-min-clone`,
+                'The Illumination':           `${CAL}/tarot-reading-the-exploration-60-min-clone`,
+                'Couples Reading':            `${CAL}/tarot-reading-30-min-clone`,
+                'Tarot Package':              `${CAL}/free-consultation`,
+                'Moon Circle':                `${CAL}/free-consultation`,
+                'Community Event':            `${CAL}/free-consultation`,
+                'Group Reading':              `${CAL}/free-consultation`,
             };
 
-            const url = calendlyUrls[service] || 'https://calendly.com/alexsimone-gordon/free-consultation';
+            const url = calendlyUrls[service] || `${CAL}/free-consultation`;
 
             // Open as Calendly popup
             Calendly.initPopupWidget({ url });
