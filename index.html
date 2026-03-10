@@ -366,7 +366,7 @@
             <!-- ══ LEFT: THREE SERVICE PILLARS ══════════════════════════ -->
             <div class="pillars-col">
 
-                <div class="adventure-card sped" data-service="special-education">
+                <div class="adventure-card sped" data-service="special-education" onclick="openPricing('special-education')" role="button" aria-label="View Special Education Advocacy tiers and pricing">
                     <div class="adventure-icon">🎯</div>
                     <h3>Special Education Advocacy</h3>
                     <p>Navigate the IEP process with confidence. From document review to meeting attendance, tutoring, and ongoing support. I help families secure the educational services their children deserve.</p>
@@ -381,10 +381,10 @@
                         <span class="skill-pill" style="border-color:var(--sped-primary); color:var(--sped-primary);">Ongoing Support</span>
                         <span class="skill-pill" style="border-color:var(--sped-primary); color:var(--sped-primary);">Case Management</span>
                     </div>
-                    <button class="explore-btn" onclick="openPricing('special-education')" style="margin-top:1.2rem;">View Tiers &amp; Pricing</button>
+                    <button class="explore-btn" onclick="event.stopPropagation(); openPricing('special-education')" style="margin-top:1.2rem;">View Tiers &amp; Pricing</button>
                 </div>
 
-                <div class="adventure-card instructional" data-service="instructional-design">
+                <div class="adventure-card instructional" data-service="instructional-design" onclick="openPricing('instructional')" role="button" aria-label="View Instructional Design tiers and pricing">
                     <div class="adventure-icon">📚</div>
                     <h3>Instructional Design, AI Production &amp; Corporate Services</h3>
                     <p>From curriculum that moves the needle to AI Smartcuts that cut through the noise. I design, produce, and deliver learning experiences that work. Curriculum development, Zoom event production, AI training content, copyediting, facilitator coaching, and more.</p>
@@ -401,10 +401,10 @@
                         <span class="skill-pill">Facilitator Coaching</span>
                         <span class="skill-pill">Program Consultation</span>
                     </div>
-                    <button class="explore-btn" onclick="openPricing('instructional')" style="margin-top:1.2rem;">Explore Services &amp; Pricing</button>
+                    <button class="explore-btn" onclick="event.stopPropagation(); openPricing('instructional')" style="margin-top:1.2rem;">Explore Services &amp; Pricing</button>
                 </div>
 
-                <div class="adventure-card creative" data-service="tarot-spiritual">
+                <div class="adventure-card creative" data-service="tarot-spiritual" onclick="openPricing('tarot')" role="button" aria-label="View Tarot and Spiritual Guidance tiers and pricing">
                     <div class="adventure-icon">✨</div>
                     <h3>Tarot &amp; Spiritual Guidance</h3>
                     <p>Illuminate your path through intuitive tarot readings and moon circle gatherings. Individual sessions and packages available for personal exploration and transformation guided by 13+ years of practice.</p>
@@ -419,7 +419,7 @@
                         <span class="skill-pill" style="border-color:var(--creative-primary); color:var(--creative-primary);">Reflection &amp; Clarity</span>
                         <span class="skill-pill" style="border-color:var(--creative-primary); color:var(--creative-primary);">Spiritual Practice</span>
                     </div>
-                    <button class="explore-btn" onclick="openPricing('tarot')" style="margin-top:1.2rem;">View Readings &amp; Pricing</button>
+                    <button class="explore-btn" onclick="event.stopPropagation(); openPricing('tarot')" style="margin-top:1.2rem;">View Readings &amp; Pricing</button>
                 </div>
 
             </div><!-- end pillars-col -->
@@ -452,19 +452,19 @@
                         <h3 class="aq-q-text">What brings you here today?</h3>
                         <p class="aq-q-sub">Choose the one that feels most true right now.</p>
                         <div class="aq-options">
-                            <button class="aq-opt" data-value="child" onclick="aqAnswer(1,'child')">
+                            <button class="aq-opt" data-value="child" onclick="aqAnswer(1,'child',this)">
                                 <span class="aq-opt-icon">👧</span>
                                 <span class="aq-opt-text">My child is struggling in school and I don't know what to do</span>
                             </button>
-                            <button class="aq-opt" data-value="org" onclick="aqAnswer(1,'org')">
+                            <button class="aq-opt" data-value="org" onclick="aqAnswer(1,'org',this)">
                                 <span class="aq-opt-icon">🏢</span>
                                 <span class="aq-opt-text">My organization needs better training, curriculum, or learning design</span>
                             </button>
-                            <button class="aq-opt" data-value="stuck" onclick="aqAnswer(1,'stuck')">
+                            <button class="aq-opt" data-value="stuck" onclick="aqAnswer(1,'stuck',this)">
                                 <span class="aq-opt-icon">🌀</span>
                                 <span class="aq-opt-text">I feel stuck and I'm looking for clarity and direction in my life</span>
                             </button>
-                            <button class="aq-opt" data-value="all" onclick="aqAnswer(1,'all')">
+                            <button class="aq-opt" data-value="all" onclick="aqAnswer(1,'all',this)">
                                 <span class="aq-opt-icon">✨</span>
                                 <span class="aq-opt-text">Honestly? All of the above. It's a lot.</span>
                             </button>
@@ -486,15 +486,15 @@
                         <h3 class="aq-q-text">How urgent does this feel?</h3>
                         <p class="aq-q-sub">There's no wrong answer here.</p>
                         <div class="aq-options">
-                            <button class="aq-opt" data-value="now" onclick="aqAnswer(2,'now')">
+                            <button class="aq-opt" data-value="now" onclick="aqAnswer(2,'now',this)">
                                 <span class="aq-opt-icon">🔥</span>
                                 <span class="aq-opt-text">There's a meeting, deadline, or crisis happening now</span>
                             </button>
-                            <button class="aq-opt" data-value="soon" onclick="aqAnswer(2,'soon')">
+                            <button class="aq-opt" data-value="soon" onclick="aqAnswer(2,'soon',this)">
                                 <span class="aq-opt-icon">📆</span>
                                 <span class="aq-opt-text">Things are building and I want to get ahead of it</span>
                             </button>
-                            <button class="aq-opt" data-value="explore" onclick="aqAnswer(2,'explore')">
+                            <button class="aq-opt" data-value="explore" onclick="aqAnswer(2,'explore',this)">
                                 <span class="aq-opt-icon">🌱</span>
                                 <span class="aq-opt-text">No rush — I'm exploring what's possible</span>
                             </button>
@@ -516,19 +516,19 @@
                         <h3 class="aq-q-text">What does success look like for you?</h3>
                         <p class="aq-q-sub">Pick the one that resonates most.</p>
                         <div class="aq-options">
-                            <button class="aq-opt" data-value="plan" onclick="aqAnswer(3,'plan')">
+                            <button class="aq-opt" data-value="plan" onclick="aqAnswer(3,'plan',this)">
                                 <span class="aq-opt-icon">📋</span>
                                 <span class="aq-opt-text">A concrete plan, document, or system I can use immediately</span>
                             </button>
-                            <button class="aq-opt" data-value="capacity" onclick="aqAnswer(3,'capacity')">
+                            <button class="aq-opt" data-value="capacity" onclick="aqAnswer(3,'capacity',this)">
                                 <span class="aq-opt-icon">🧠</span>
                                 <span class="aq-opt-text">Building my skills so I can handle this myself long-term</span>
                             </button>
-                            <button class="aq-opt" data-value="advocate" onclick="aqAnswer(3,'advocate')">
+                            <button class="aq-opt" data-value="advocate" onclick="aqAnswer(3,'advocate',this)">
                                 <span class="aq-opt-icon">🛡️</span>
                                 <span class="aq-opt-text">Someone in my corner who knows the system and speaks the language</span>
                             </button>
-                            <button class="aq-opt" data-value="clarity" onclick="aqAnswer(3,'clarity')">
+                            <button class="aq-opt" data-value="clarity" onclick="aqAnswer(3,'clarity',this)">
                                 <span class="aq-opt-icon">🔮</span>
                                 <span class="aq-opt-text">I need clarity first. I'll figure out the rest once I can see clearly.</span>
                             </button>
@@ -550,19 +550,19 @@
                         <h3 class="aq-q-text">Who else is involved?</h3>
                         <p class="aq-q-sub">Help me understand your ecosystem.</p>
                         <div class="aq-options">
-                            <button class="aq-opt" data-value="solo" onclick="aqAnswer(4,'solo')">
+                            <button class="aq-opt" data-value="solo" onclick="aqAnswer(4,'solo',this)">
                                 <span class="aq-opt-icon">🙋</span>
                                 <span class="aq-opt-text">Just me — this is personal</span>
                             </button>
-                            <button class="aq-opt" data-value="family" onclick="aqAnswer(4,'family')">
+                            <button class="aq-opt" data-value="family" onclick="aqAnswer(4,'family',this)">
                                 <span class="aq-opt-icon">👨‍👩‍👧</span>
                                 <span class="aq-opt-text">My family — especially a child or young person</span>
                             </button>
-                            <button class="aq-opt" data-value="team" onclick="aqAnswer(4,'team')">
+                            <button class="aq-opt" data-value="team" onclick="aqAnswer(4,'team',this)">
                                 <span class="aq-opt-icon">👥</span>
                                 <span class="aq-opt-text">A team, staff, or organization</span>
                             </button>
-                            <button class="aq-opt" data-value="community" onclick="aqAnswer(4,'community')">
+                            <button class="aq-opt" data-value="community" onclick="aqAnswer(4,'community',this)">
                                 <span class="aq-opt-icon">🌍</span>
                                 <span class="aq-opt-text">A broader community or group</span>
                             </button>
@@ -584,19 +584,19 @@
                         <h3 class="aq-q-text">What's the biggest barrier right now?</h3>
                         <p class="aq-q-sub">Be honest — this helps me be more useful to you.</p>
                         <div class="aq-options">
-                            <button class="aq-opt" data-value="knowledge" onclick="aqAnswer(5,'knowledge')">
+                            <button class="aq-opt" data-value="knowledge" onclick="aqAnswer(5,'knowledge',this)">
                                 <span class="aq-opt-icon">📖</span>
                                 <span class="aq-opt-text">I don't know enough — I need an expert who does</span>
                             </button>
-                            <button class="aq-opt" data-value="overwhelm" onclick="aqAnswer(5,'overwhelm')">
+                            <button class="aq-opt" data-value="overwhelm" onclick="aqAnswer(5,'overwhelm',this)">
                                 <span class="aq-opt-icon">😮‍💨</span>
                                 <span class="aq-opt-text">I'm overwhelmed — there's too much and I don't know where to start</span>
                             </button>
-                            <button class="aq-opt" data-value="system" onclick="aqAnswer(5,'system')">
+                            <button class="aq-opt" data-value="system" onclick="aqAnswer(5,'system',this)">
                                 <span class="aq-opt-icon">🧩</span>
                                 <span class="aq-opt-text">The system isn't working — I need someone who can navigate it with me</span>
                             </button>
-                            <button class="aq-opt" data-value="direction" onclick="aqAnswer(5,'direction')">
+                            <button class="aq-opt" data-value="direction" onclick="aqAnswer(5,'direction',this)">
                                 <span class="aq-opt-icon">🧭</span>
                                 <span class="aq-opt-text">I've lost my direction — I need to reconnect with what matters</span>
                             </button>
@@ -618,19 +618,19 @@
                         <h3 class="aq-q-text">How do you prefer to work together?</h3>
                         <p class="aq-q-sub">This helps me recommend the right format.</p>
                         <div class="aq-options">
-                            <button class="aq-opt" data-value="oneoff" onclick="aqAnswer(6,'oneoff')">
+                            <button class="aq-opt" data-value="oneoff" onclick="aqAnswer(6,'oneoff',this)">
                                 <span class="aq-opt-icon">⚡</span>
                                 <span class="aq-opt-text">One focused session to get what I need fast</span>
                             </button>
-                            <button class="aq-opt" data-value="series" onclick="aqAnswer(6,'series')">
+                            <button class="aq-opt" data-value="series" onclick="aqAnswer(6,'series',this)">
                                 <span class="aq-opt-icon">🔄</span>
                                 <span class="aq-opt-text">A series of sessions over time — I want sustained support</span>
                             </button>
-                            <button class="aq-opt" data-value="project" onclick="aqAnswer(6,'project')">
+                            <button class="aq-opt" data-value="project" onclick="aqAnswer(6,'project',this)">
                                 <span class="aq-opt-icon">🗂️</span>
                                 <span class="aq-opt-text">A project engagement — deliverable-based work</span>
                             </button>
-                            <button class="aq-opt" data-value="unsure" onclick="aqAnswer(6,'unsure')">
+                            <button class="aq-opt" data-value="unsure" onclick="aqAnswer(6,'unsure',this)">
                                 <span class="aq-opt-icon">🤷</span>
                                 <span class="aq-opt-text">I'm not sure yet — help me figure that out too</span>
                             </button>
@@ -683,13 +683,13 @@
     const aqAnswers = {};
     const aqTotal = 6;
 
-    function aqAnswer(q, value) {
+    function aqAnswer(q, value, btn) {
         aqAnswers[q] = value;
 
         // Highlight selected
         const question = document.querySelector(`.aq-question[data-q="${q}"]`);
         question.querySelectorAll('.aq-opt').forEach(b => b.classList.remove('selected'));
-        event.currentTarget.classList.add('selected');
+        if (btn) btn.classList.add('selected');
 
         // Short delay then advance
         setTimeout(() => {
@@ -710,6 +710,12 @@
         const pct = (next / aqTotal) * 100;
         document.getElementById('aq-progress').style.width = pct + '%';
         document.getElementById('aq-progress-label').textContent = `Question ${next} of ${aqTotal}`;
+
+        // On mobile, scroll quiz into view so users see the next question
+        const wrapper = document.getElementById('alex-quiz');
+        if (wrapper && window.innerWidth < 968) {
+            setTimeout(() => wrapper.scrollIntoView({ behavior: 'smooth', block: 'start' }), 50);
+        }
     }
 
     function aqShowResults() {
@@ -938,17 +944,29 @@
                     <div id="chapter-fool" class="tarot-chapter-body" style="display:none;">
                         <div class="timeline-year">2005 to 2009</div>
                         <h4>B.A. in Anthropological Perspectives, Binghamton University</h4>
-                        <p>Graduated magna cum laude with a 3.71 GPA. Inducted into Phi Eta Sigma Honors Society and recognized as a Binghamton University Scholar, providing peer mentoring and tutoring for advanced coursework. Cultural Anthropology gave me the lens I still use every day: every community has its own logic, its own beauty, its own systems worth understanding before you try to change them.</p>
+                        <ul>
+                            <li>Graduated magna cum laude &middot; 3.71 GPA &middot; Binghamton University Scholar</li>
+                            <li>Phi Eta Sigma Honors Society; peer mentoring &amp; tutoring for advanced coursework</li>
+                            <li>B.A. Anthropological Perspectives — the lens still used every day</li>
+                        </ul>
                         <span class="timeline-tag" style="background:rgba(106,27,154,0.15); color:#6A1B9A;">Magna Cum Laude · Phi Eta Sigma</span>
 
                         <div class="timeline-year" style="margin-top:1.2rem;">2006 to 2009</div>
                         <h4>Event Host & Manager, Hookah Bar</h4>
-                        <p>Managed operations and hosted events during and after college. Built skills in community-building, space-holding, and bringing people together around shared experience, before I knew that was what I was doing.</p>
+                        <ul>
+                            <li>Managed operations and hosted events during and after college</li>
+                            <li>Built community-building, space-holding, and event facilitation skills</li>
+                        </ul>
                         <span class="timeline-tag" style="background:rgba(106,27,154,0.15); color:#6A1B9A;">Events & Community</span>
 
                         <div class="timeline-year" style="margin-top:1.2rem;">October 2009 to March 2010</div>
                         <h4>Assistant to English Department, Oranim Ofek Regional High School, Israel</h4>
-                        <p>Taught English to students in grades 7-12 at a regional high school on Kibbutz Evron in northern Israel, working with diverse social and educational backgrounds. Assisted faculty in curriculum development, created original lectures and activities, served as a student mentor, and organized community outreach programs including cultural competency seminars and activity fairs. The first experience of teaching across a genuine cultural and linguistic divide, and the first proof that connection transcends every barrier.</p>
+                        <ul>
+                            <li>Taught English grades 7–12, Kibbutz Evron, northern Israel</li>
+                            <li>Assisted with curriculum development; created original lessons and activities</li>
+                            <li>Student mentor; organized cultural competency seminars and activity fairs</li>
+                            <li>First proof that connection transcends every barrier</li>
+                        </ul>
                         <span class="timeline-tag" style="background:rgba(106,27,154,0.15); color:#6A1B9A;">Israel · International Teaching</span>
                     </div>
                 </div>
@@ -964,32 +982,57 @@
                     <div id="chapter-magician" class="tarot-chapter-body" style="display:none;">
                         <div class="timeline-year">2011</div>
                         <h4>Certificate in TEFL, Via Lingua, Crete, Greece</h4>
-                        <p>Completed a rigorous 120-hour Teaching English as a Foreign Language certification in Crete, Greece, including 10 hours of observed teaching practice, grammar and phonology assessment, and adult ESL instruction. Learned foundational Greek in the process, stepping into the humbling position of a language learner and carrying that empathy into every classroom since.</p>
+                        <ul>
+                            <li>120-hour TEFL certification, Crete, Greece (10 hours observed teaching practice)</li>
+                            <li>Grammar, phonology assessment, and adult ESL instruction</li>
+                            <li>Learned foundational Greek — carried that humility into every classroom since</li>
+                        </ul>
                         <span class="timeline-tag" style="background:rgba(21,101,192,0.15); color:#1565C0;">Greece · TEFL Certified</span>
 
                         <div class="timeline-year" style="margin-top:1.2rem;">2011</div>
                         <h4>Introduction to Tarot</h4>
-                        <p>Began a self-directed study of tarot, astrology, and metaphysical traditions. What started as personal curiosity became a 13-year practice and eventually a professional one: a framework for clarity that no traditional training could have given me.</p>
+                        <ul>
+                            <li>Began self-directed study of tarot, astrology, and metaphysical traditions</li>
+                            <li>A 13-year practice that evolved into a professional framework for clarity</li>
+                        </ul>
                         <span class="timeline-tag" style="background:rgba(21,101,192,0.15); color:#1565C0;">Spiritual Practice Begins</span>
 
                         <div class="timeline-year" style="margin-top:1.2rem;">2011 to 2013</div>
                         <h4>Tutor, Champion Learning Center</h4>
-                        <p>Provided free in-home tutoring and mentoring to K-12 students in low-income areas of NYC, specifically selected for students with special needs and behavioral challenges. Implemented original learning materials to meet individual learning levels and styles, supported students in school reintegration, and provided college readiness coaching including SAT and ACT preparation. Organized and funded enrichment field trips to libraries, museums, and cultural sites across the city.</p>
+                        <ul>
+                            <li>Free in-home tutoring &amp; mentoring, K–12, NYC — focus on students with special needs</li>
+                            <li>Original learning materials tailored to individual levels and styles</li>
+                            <li>College readiness coaching including SAT/ACT prep; school reintegration support</li>
+                            <li>Organized enrichment field trips to libraries, museums, and cultural sites</li>
+                        </ul>
                         <span class="timeline-tag" style="background:rgba(21,101,192,0.15); color:#1565C0;">Tutoring · Mentorship</span>
 
                         <div class="timeline-year" style="margin-top:1.2rem;">January 2013 to 2014</div>
                         <h4>Founder, Alex of All Trades</h4>
-                        <p>Founded and operated a childcare and early childhood development business in Bushwick, Brooklyn under the name Alex of All Trades, the name that would follow me for the next decade and eventually become the foundation of everything built here. Provided first-rate care for infants and toddlers, designing creative activities rooted in positive early-childhood development. The business was the first thing I ever built entirely from scratch, and it taught me that the trades were always going to be many.</p>
+                        <ul>
+                            <li>Founded Alex of All Trades childcare in Bushwick, Brooklyn — origin of the brand</li>
+                            <li>First-rate infant/toddler care with creative early-childhood development activities</li>
+                            <li>The first thing I ever built entirely from scratch</li>
+                        </ul>
                         <span class="timeline-tag" style="background:rgba(21,101,192,0.15); color:#1565C0;">Origin of the Brand · Entrepreneurship</span>
 
                         <div class="timeline-year" style="margin-top:1.2rem;">June to September 2013</div>
                         <h4>Teaching Artist, Beacon Center for Arts & Leadership</h4>
-                        <p>Designed and facilitated "Get In My Circle," an original dance, movement, and life skills curriculum for 80 students ages 8-15 at the Beacon Summer Camp, Coalition for Hispanic Family Services in Bushwick. The program wove hip-hop, jazz, modern, and ballet with circus hula hoop technique, music appreciation, and self-expression, culminating in a multi-media performance for an audience of 200 people. Managed a staff of 4-6 youth workers aged 15-23, providing mentorship, college advising, and leadership development. The first time a crowd watched something I built.</p>
+                        <ul>
+                            <li>Designed &amp; facilitated "Get In My Circle" dance/life skills curriculum, 80 students ages 8–15</li>
+                            <li>Multi-media culminating performance for an audience of 200 people</li>
+                            <li>Managed 4–6 youth workers; provided mentorship, college advising, and leadership development</li>
+                        </ul>
                         <span class="timeline-tag" style="background:rgba(21,101,192,0.15); color:#1565C0;">Teaching Artist · Arts Integration</span>
 
                         <div class="timeline-year" style="margin-top:1.2rem;">March to May 2014</div>
                         <h4>Teaching Apprentice, John Ericsson Middle School (MS 126), Brooklyn</h4>
-                        <p>Completed the NYC Teaching Fellows Spring Classroom Apprenticeship at MS 126 in Brooklyn. Provided 1-on-1, small group, and whole-class instruction across ELA, Math, and Social Studies for grades 6-8 in both general education and special education settings. Partnered with classroom teachers to develop Common Core-aligned lessons on the Holocaust and Human Rights that bridged both environments. Collaborated on RTI and Early Warning Indicator Systems.</p>
+                        <ul>
+                            <li>NYC Teaching Fellows Spring Classroom Apprenticeship, MS 126 Brooklyn (grades 6–8)</li>
+                            <li>Instruction across ELA, Math, and Social Studies in gen ed and SpEd settings</li>
+                            <li>Co-developed Common Core Holocaust &amp; Human Rights curriculum</li>
+                            <li>Collaborated on RTI and Early Warning Indicator systems</li>
+                        </ul>
                         <span class="timeline-tag" style="background:rgba(21,101,192,0.15); color:#1565C0;">NYC Teaching Fellows · Brooklyn</span>
                     </div>
                 </div>
@@ -1005,22 +1048,42 @@
                     <div id="chapter-empress" class="tarot-chapter-body" style="display:none;">
                         <div class="timeline-year">2014 to 2016</div>
                         <h4>M.S. in Special Education, Long Island University Brooklyn</h4>
-                        <p>Earned a Master of Science in Special Education, Generalist 7-12 with a 3.91 GPA, graduating Summa Cum Laude through the NYC Teaching Fellows Program. A social justice-driven program with an emphasis on urban studies through a social-constructivist lens, it gave formal language to everything I had already been practicing intuitively: differentiated instruction, UDL, culturally responsive pedagogy, and the full IEP lifecycle.</p>
+                        <ul>
+                            <li>M.S. Special Education (Generalist 7–12), NYC Teaching Fellows &middot; 3.91 GPA &middot; Summa Cum Laude</li>
+                            <li>Social justice-driven program; urban studies through a social-constructivist lens</li>
+                            <li>Formal grounding in UDL, differentiated instruction, CRSE, and the full IEP lifecycle</li>
+                        </ul>
                         <span class="timeline-tag" style="background:rgba(46,125,50,0.15); color:#2E7D32;">Summa Cum Laude · 3.91 GPA</span>
 
                         <div class="timeline-year" style="margin-top:1.2rem;">2014 to 2016</div>
                         <h4>Special Education Teacher, Brownsville Collaborative Middle School, Brooklyn</h4>
-                        <p>Taught all subjects in a self-contained special education bridge-class setting for grades 6-8 in Brownsville, Brooklyn. Created immersive, performance-based curricula that centered student talents and abilities. Launched Film Club, offering students exposure to classic cinema and film theory through written critique. Produced "Poetry at the Met": four immersive poetry writing workshops with trips to the Metropolitan Museum of Art. Selected by the school principal as the singular after-school academic instructor with Roads to Success, hand-crafting activity-based ELA and Math lessons for all after-school students.</p>
+                        <ul>
+                            <li>Self-contained SpEd bridge class, grades 6–8, Brownsville Collaborative</li>
+                            <li>Immersive, performance-based, culturally responsive curricula</li>
+                            <li>Founded Film Club; produced &#x201C;Poetry at the Met&#x201D; (4 workshops at the Metropolitan Museum)</li>
+                            <li>Selected as sole after-school academic instructor for Roads to Success</li>
+                        </ul>
                         <span class="timeline-tag" style="background:rgba(46,125,50,0.15); color:#2E7D32;">Brooklyn · Arts Integration</span>
 
                         <div class="timeline-year" style="margin-top:1.2rem;">2015 to 2017</div>
                         <h4>Professional Fellowships & Cultural Partnerships</h4>
-                        <p>Selected as one of 50 educators city-wide for the NYC DOE Culturally Responsive-Sustaining Education (CRSE) Fellowship, developing CRSE curriculum and pedagogical practices for use across New York City schools and communities. Participated in the Literacy Design Collaborative (2015-2016), a backwards-design framework for skill-based literacy curricula with weekly coaching support. Engaged in Urban Advantage, a training program connecting public school teachers with cultural institutions including zoos, botanical gardens, museums, and science centers. Participated in Art in the Classroom (Spring 2015), including a writing marathon collaboration with the Metropolitan Museum of Art and an evening at the Brooklyn Museum Educators program.</p>
+                        <ul>
+                            <li>NYC DOE CRSE Fellow — 1 of 50 educators selected city-wide</li>
+                            <li>Literacy Design Collaborative: backwards-design literacy curricula with weekly coaching</li>
+                            <li>Urban Advantage: connected classrooms to zoos, museums, and science centers</li>
+                            <li>Art in the Classroom: writing marathon at the Met; Brooklyn Museum Educators program</li>
+                        </ul>
                         <span class="timeline-tag" style="background:rgba(46,125,50,0.15); color:#2E7D32;">CRSE Fellowship · 1 of 50 City-Wide</span>
 
                         <div class="timeline-year" style="margin-top:1.2rem;">2016 to 2019</div>
                         <h4>Arts Education Liaison, Highland Park Community School, East New York, Brooklyn</h4>
-                        <p>Served as Arts Education Liaison across the school, working collaboratively with administration and staff to ensure high-quality arts programming school-wide. Won the Shubert Foundation Grant, one of only 15 schools selected city-wide, to launch a full musical theater department, ultimately directing a sold-out production of "Once on This Island" with a cast of 30 middle schoolers. Received the Sing For Hope Grant, bringing an originally designed piano to the school and developing private and small-group piano lessons for students. Arranged free chamber music programming through the Orpheus Chamber Concert Series at Carnegie Hall. Developed a music appreciation program through Blueprint for the Arts. Served as Grade Team Lead, mentoring new teachers, supporting pedagogy, developing interdisciplinary project-based curricula, and organizing senior events including prom, graduation, and the PBL End-of-Year Symposium.</p>
+                        <ul>
+                            <li>Arts Education Liaison: school-wide high-quality arts programming</li>
+                            <li>Shubert Foundation Grant winner — 1 of 15 schools city-wide; directed sold-out &#x201C;Once on This Island&#x201D;</li>
+                            <li>Sing For Hope Grant: brought an originally designed piano to the school</li>
+                            <li>Orpheus Chamber Concert Series at Carnegie Hall for students</li>
+                            <li>Grade Team Lead: mentored new teachers; led PBL End-of-Year Symposium</li>
+                        </ul>
                         <span class="timeline-tag" style="background:rgba(46,125,50,0.15); color:#2E7D32;">Shubert Grant · Sing For Hope · Carnegie Hall</span>
                     </div>
                 </div>
@@ -1036,22 +1099,38 @@
                     <div id="chapter-chariot" class="tarot-chapter-body" style="display:none;">
                         <div class="timeline-year">July 2017 to Present</div>
                         <h4>Senior Instructional Designer, NYC DOE DREAM Program</h4>
-                        <p>Joined the DREAM Program (Specialized High School Intensive) in July 2017 as an ELA teacher. Became a founding member of the Central Planning Team in the Office of Equity and Access. Promoted to the Professional Learning Leadership team in 2018, facilitating professional development for teachers program-wide and supporting new teacher recruitment and retention. From 2020 onward, served as Lead Instructional Designer: authored the entire ELA curriculum delivered to 4,000-5,000 NYC students annually across 20 sites in all five boroughs, using Nearpod and Google Suite to reach hundreds of teachers in a remote and hybrid environment. Drove a 238% improvement in specialized high school acceptance rates and 100% teacher satisfaction with the curriculum. Led the ELA team in producing three professional development cycles per year and conducted site visits across all five boroughs to coach teachers and gather systematic feedback for continuous improvement.</p>
+                        <ul>
+                            <li>Joined DREAM Program 2017; founding Central Planning Team member in Office of Equity and Access</li>
+                            <li>Promoted to Professional Learning Leadership team 2018</li>
+                            <li>Lead Instructional Designer from 2020: authored full ELA curriculum for 4,000–5,000 students/year</li>
+                            <li>Delivered across 20 NYC sites in all five boroughs via Nearpod &amp; Google Suite</li>
+                            <li>Drove 238% improvement in specialized high school acceptance rates; 100% teacher satisfaction</li>
+                        </ul>
                         <span class="timeline-tag" style="background:rgba(198,40,40,0.15); color:#C62828;">238% · Lead Instructional Designer · Founding Team</span>
 
                         <div class="timeline-year" style="margin-top:1.2rem;">2019 to 2020</div>
                         <h4>Special Education Teacher, New Voices School of Academic and Creative Arts, Park Slope, Brooklyn</h4>
-                        <p>Taught in an integrated co-teaching setting at New Voices, a school built at the intersection of academics and the arts. Collaborated with general education teachers, ESL teachers, and paraprofessionals across all content areas. Launched NIA After School Programming, including Poetry Club (meeting three times weekly to read, analyze, and write original poetry toward a cumulative anthology) and Get In My Circle (a third iteration of the fitness and hula hoop dance expression class developed years earlier in Bushwick).</p>
+                        <ul>
+                            <li>Integrated co-teaching at New Voices School (academics and arts intersection)</li>
+                            <li>Collaborated with ELA, ESL, and special education teachers across content areas</li>
+                            <li>Launched NIA After School: Poetry Club and Get In My Circle fitness/dance class</li>
+                        </ul>
                         <span class="timeline-tag" style="background:rgba(198,40,40,0.15); color:#C62828;">Brooklyn · After School Programming</span>
 
                         <div class="timeline-year" style="margin-top:1.2rem;">2020 to 2023</div>
                         <h4>Special Education Teacher, Newcomers High School, Long Island City, Queens</h4>
-                        <p>Served students in grades 9-12 at Newcomers High School, a school dedicated to recently arrived immigrant English Language Learners. Crafted rigorous, interdisciplinary, performance-based curricula across all content areas for students navigating new languages, new systems, and new lives. Earned designation as NYC DOE / UFT Peer Collaborative Teacher. Participated in the PD Committee, Special Education Committee, Consultation Committee, and after-school programming.</p>
+                        <ul>
+                            <li>Grades 9–12, Newcomers High School (recently arrived immigrant ELLs)</li>
+                            <li>Interdisciplinary, performance-based curricula for students navigating new languages and lives</li>
+                            <li>NYC DOE/UFT Peer Collaborative Teacher designation</li>
+                        </ul>
                         <span class="timeline-tag" style="background:rgba(198,40,40,0.15); color:#C62828;">Queens · Peer Collaborative Teacher</span>
 
                         <div class="timeline-year" style="margin-top:1.2rem;">Ongoing</div>
                         <h4>Adobe Creative Educator Level 1 · Google Certified Educator</h4>
-                        <p>Earned Adobe Creative Educator Level 1 certification and Google Certified Educator designation, expanding the technical toolkit brought to every design, training, and classroom setting.</p>
+                        <ul>
+                            <li>Adobe Creative Educator Level 1 &middot; Google Certified Educator</li>
+                        </ul>
                         <span class="timeline-tag" style="background:rgba(198,40,40,0.15); color:#C62828;">Adobe · Google · Certified</span>
                     </div>
                 </div>
@@ -1067,17 +1146,30 @@
                     <div id="chapter-justice" class="tarot-chapter-body" style="display:none;">
                         <div class="timeline-year">2015 to 2016</div>
                         <h4>UFT Chapter Leader, Brownsville Collaborative Middle School</h4>
-                        <p>Created and led a flagship UFT chapter at BCMS, cultivating a successful consultation committee, MOSL committee, Safety Committee, and SLT team. Completed the United Federation of Teachers Chapter Leadership and Training program. Advocacy is not a single moment. It is a practice, a muscle, a commitment to showing up even when the room is uncomfortable, and this was where that practice was forged.</p>
+                        <ul>
+                            <li>UFT Chapter Leader at BCMS — built consultation, MOSL, Safety, and SLT committees</li>
+                            <li>Completed UFT Chapter Leadership and Training program</li>
+                        </ul>
                         <span class="timeline-tag" style="background:rgba(245,124,0,0.15); color:#F57C00;">Union Leadership · Chapter Founder</span>
 
                         <div class="timeline-year" style="margin-top:1.2rem;">August 2022 to June 2023</div>
                         <h4>Instructional Coach, UFT Teacher Center</h4>
-                        <p>Selected as Instructional Coach through the UFT Teacher Center at NYC DOE. Chaired the Professional Development Committee, developing adult-learning-centered workshops that resulted in 95% teacher engagement and a 40% increase in student outcomes. Successfully transitioned 10 new teachers into the classroom in one year, providing formal coaching cycles including co-planning, co-teaching, modeling, and classroom intervisitation. Designed and facilitated technology training workshops for 50+ instructors, resulting in a 75% increase in technology integration and enhanced engagement across 1,500+ learners school-wide. Launched a staff book study of "Teaching to Empower" with 8 regular participants. Hosted informal "sip and chats" for 20+ teachers to discuss instructional best practices. Created community events for staff including seasonal celebrations with 30+ attendance. Published monthly newsletters sharing best practices and professional successes.</p>
+                        <ul>
+                            <li>UFT Teacher Center Instructional Coach at NYC DOE</li>
+                            <li>Chaired PD Committee: 95% teacher engagement; 40% increase in student outcomes</li>
+                            <li>Transitioned 10 new teachers through co-planning, co-teaching, and intervisitation</li>
+                            <li>Technology training for 50+ instructors: 75% tech integration increase; 1,500+ learners impacted</li>
+                            <li>Staff book study, &#x201C;sip and chats,&#x201D; monthly newsletters, and seasonal community events</li>
+                        </ul>
                         <span class="timeline-tag" style="background:rgba(245,124,0,0.15); color:#F57C00;">Instructional Coach · UFT Teacher Center</span>
 
                         <div class="timeline-year" style="margin-top:1.2rem;">2023 to 2025</div>
                         <h4>Special Education Teacher & Union Leader, Facing History School, Hell's Kitchen, Manhattan</h4>
-                        <p>Taught at Facing History School, a school whose entire mission rests on the premise that understanding history creates more just and courageous citizens. Returned to union chapter leadership from 2024 to 2025, advocating for students and staff alike. Brought a full career's worth of pedagogical expertise, IEP advocacy, and community-building to every room at every level of the school.</p>
+                        <ul>
+                            <li>Taught at Facing History School, Manhattan (2023–2025)</li>
+                            <li>Returned to UFT chapter leadership 2024–2025, advocating for students and staff</li>
+                            <li>Brought IEP advocacy, pedagogy, and community-building to every level of the school</li>
+                        </ul>
                         <span class="timeline-tag" style="background:rgba(245,124,0,0.15); color:#F57C00;">Manhattan · Union Leader · Facing History</span>
                     </div>
                 </div>
@@ -1093,17 +1185,28 @@
                     <div id="chapter-star" class="tarot-chapter-body" style="display:none;">
                         <div class="timeline-year">2025</div>
                         <h4>New York to Santa Fe: Following the First Star</h4>
-                        <p>After more than a decade in New York City, teaching in five schools across three boroughs, building curriculum that changed outcomes, leading unions, winning grants, and quietly deepening a spiritual practice that held it all together, I left. The first stop was Santa Fe, New Mexico, where I began establishing a community collective with the goal of uniting artists, vendors, and venues to cultivate connection, transformation, and healing through art and collaboration. Santa Fe was the first breath after a very long exhale. It was proof that community can be built anywhere, and that the impulse to build it never turns off.</p>
+                        <ul>
+                            <li>Left NYC after 10+ years, 5 schools, and 3 boroughs</li>
+                            <li>Moved to Santa Fe, NM — began establishing a community arts collective</li>
+                            <li>Uniting artists, vendors, and venues for connection, transformation, and healing</li>
+                        </ul>
                         <span class="timeline-tag" style="background:rgba(142,68,173,0.15); color:#8E44AD;">Santa Fe · Community Building</span>
 
                         <div class="timeline-year" style="margin-top:1.2rem;">2025 to Present</div>
                         <h4>Santa Fe to St. Louis: The Recalibration</h4>
-                        <p>The move to St. Louis was not a retreat. It was a recalibration. A choice to pour all of that experience, all of those tools, all of that love into something built entirely on my own terms, in a city where community is hungry for exactly what I have spent a lifetime learning to offer. The Star does not wander. It orients.</p>
+                        <ul>
+                            <li>Relocated to St. Louis — a recalibration, not a retreat</li>
+                            <li>Pouring a lifetime of experience, tools, and love into something built entirely on my own terms</li>
+                        </ul>
                         <span class="timeline-tag" style="background:rgba(142,68,173,0.15); color:#8E44AD;">St. Louis · New Roots</span>
 
                         <div class="timeline-year" style="margin-top:1.2rem;">2026</div>
                         <h4>Alex of All Trades: Fully Launched</h4>
-                        <p>The educator. The advocate. The instructional designer. The tarot practitioner. The community builder. The event host. The writer. The coach. All of it, together, in one place, offered to anyone who is ready to grow, navigate, create, or see more clearly. St. Louis Metro Area and everywhere a screen can reach.</p>
+                        <ul>
+                            <li>The educator. The advocate. The instructional designer. The tarot practitioner.</li>
+                            <li>The community builder. The event host. The writer. The coach.</li>
+                            <li>All of it, together — St. Louis Metro Area and everywhere a screen can reach.</li>
+                        </ul>
                         <span class="timeline-tag" style="background:linear-gradient(135deg,var(--id-primary),var(--creative-primary)); color:white;">Alex of All Trades ✨</span>
                     </div>
                 </div>
@@ -1566,7 +1669,7 @@
             <div class="portfolio-grid">
 
                 <!-- Card 1: DREAM Curriculum -->
-                <div class="portfolio-card">
+                <div class="portfolio-card" onclick="openPricing('instructional')" role="button" aria-label="View Instructional Design services">
                     <div class="portfolio-content">
                         <span class="portfolio-category">Curriculum Design</span>
                         <h3>DREAM Program ELA Curriculum</h3>
@@ -1589,7 +1692,7 @@
                 </div>
 
                 <!-- Card 2: Instructional Coaching & PD -->
-                <div class="portfolio-card">
+                <div class="portfolio-card" onclick="openPricing('instructional')" role="button" aria-label="View Instructional Design services">
                     <div class="portfolio-content">
                         <span class="portfolio-category">Professional Development & Coaching</span>
                         <h3>Educator Coaching & Adult Learning Systems</h3>
@@ -1612,7 +1715,7 @@
                 </div>
 
                 <!-- Card 3: Technology Integration -->
-                <div class="portfolio-card">
+                <div class="portfolio-card" onclick="openPricing('instructional')" role="button" aria-label="View Instructional Design services">
                     <div class="portfolio-content">
                         <span class="portfolio-category">Technology Integration</span>
                         <h3>Technology as Pedagogy, Not Just Platform</h3>
@@ -1639,7 +1742,7 @@
                 </div>
 
                 <!-- Card 4: Arts Integration & Grants -->
-                <div class="portfolio-card">
+                <div class="portfolio-card" onclick="openPricing('instructional')" role="button" aria-label="View Instructional Design services">
                     <div class="portfolio-content">
                         <span class="portfolio-category">Arts Integration & Cultural Partnerships</span>
                         <h3>Building Arts Programs Where None Existed</h3>
@@ -1662,7 +1765,7 @@
                 </div>
 
                 <!-- Card 5: Proprietary Methods -->
-                <div class="portfolio-card">
+                <div class="portfolio-card" onclick="openPricing('instructional')" role="button" aria-label="View Instructional Design services">
                     <div class="portfolio-content">
                         <span class="portfolio-category">Instructional Design · Proprietary Methods</span>
                         <h3>Original Reading Strategies: WWH & COTS</h3>
@@ -1685,7 +1788,7 @@
                 </div>
 
                 <!-- Card 6: Advocacy & Union Leadership -->
-                <div class="portfolio-card">
+                <div class="portfolio-card" onclick="openPricing('special-education')" role="button" aria-label="View Special Education Advocacy services">
                     <div class="portfolio-content">
                         <span class="portfolio-category">Advocacy · Union Leadership · Systems Change</span>
                         <h3>Advocacy as Practice: Students, Staff & Systems</h3>
@@ -1871,11 +1974,6 @@
                         <p><a href="/cdn-cgi/l/email-protection#d2b3beb7aaa1bbbfbdbcb7fcb5bda0b6bdbc92b5bfb3bbbefcb1bdbf">Alexandra Gordon</a></p>
                     </div>
                     <div class="contact-item">
-                        <div class="icon">📱</div>
-                        <h4>Phone</h4>
-                        <p><a href="tel:+19145820629">(914) 582-0629</a></p>
-                    </div>
-                    <div class="contact-item">
                         <div class="icon">📍</div>
                         <h4>Location</h4>
                         <p>St. Louis Metro Area<br>Serving clients locally & nationwide</p>
@@ -1972,6 +2070,12 @@
 
         // Book Service Function
         function bookService(service) {
+            // Close any open pricing modals first so Calendly renders on top
+            document.querySelectorAll('.pricing-modal').forEach(modal => {
+                modal.classList.remove('active');
+            });
+            document.body.style.overflow = ''; // Restore scrolling before Calendly takes over
+
             const CAL = 'https://calendly.com/alexsimone-gordon';
 
             // Calendly URL map — update CAL above if your username changes
