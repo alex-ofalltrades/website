@@ -1050,7 +1050,7 @@
             transform: translateY(-6px);
         }
 
-        /* Turquoise role tag pills */
+        /* Turquoise role tag pills — base (overridden per card variant below) */
         .testimonial-tag {
             display: inline-block;
             padding: 0.25rem 0.85rem;
@@ -1068,9 +1068,9 @@
         }
 
         .testimonial-card:nth-child(odd) .testimonial-tag {
-            border-color: #4DD0E1;
-            color: #E0F7FA;
-            background: rgba(77, 208, 225, 0.15);
+            border-color: rgba(255,255,255,0.5);
+            color: #E0FFFE;
+            background: rgba(255,255,255,0.12);
         }
 
         .testimonial-card::before {
@@ -2110,41 +2110,80 @@
     .journey .tarot-chapter-body li { color: #3B0057; }
 
     /* ── Testimonials alternating styles ────────────────────────── */
-    .testimonial-card:nth-child(odd) {
+    /* Alternating 3-way: purple → light → teal → repeat */
+    .testimonial-card:nth-child(3n+1) {
         background: linear-gradient(135deg, #4A0072, #7B1FA2);
         box-shadow: 0 10px 40px rgba(74, 0, 114, 0.35);
     }
-    .testimonial-card:nth-child(odd) .testimonial-text {
+    .testimonial-card:nth-child(3n+1) .testimonial-text {
         color: #FFE8FF;
     }
-    .testimonial-card:nth-child(odd) .testimonial-info h4 {
+    .testimonial-card:nth-child(3n+1) .testimonial-info h4 {
         color: #FFD6F5;
     }
-    .testimonial-card:nth-child(odd) .testimonial-info p {
+    .testimonial-card:nth-child(3n+1) .testimonial-info p {
         color: #DDA8EE;
     }
-    .testimonial-card:nth-child(odd)::before {
+    .testimonial-card:nth-child(3n+1)::before {
         background: linear-gradient(135deg, rgba(255,255,255,0.35), rgba(255,255,255,0.15));
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
     }
-    .testimonial-card:nth-child(odd) .testimonial-avatar {
-        background: linear-gradient(135deg, #00838F, #006064);
+    .testimonial-card:nth-child(3n+1) .testimonial-avatar {
+        background: linear-gradient(135deg, #C06FE0, #9C27B0);
+    }
+    .testimonial-card:nth-child(3n+1) .testimonial-tag {
+        border-color: rgba(255,255,255,0.5);
+        color: #FFE8FF;
+        background: rgba(255,255,255,0.12);
     }
 
-    .testimonial-card:nth-child(even) .testimonial-avatar {
-        background: linear-gradient(135deg, #0097A7, #00BCD4);
-    }
-    .testimonial-card:nth-child(even) {
+    .testimonial-card:nth-child(3n+2) {
         background: #FFFFFF;
     }
-    .testimonial-card:nth-child(even) .testimonial-text {
+    .testimonial-card:nth-child(3n+2) .testimonial-text {
         color: #333;
     }
-    .testimonial-card:nth-child(even) .testimonial-info h4 {
+    .testimonial-card:nth-child(3n+2) .testimonial-info h4 {
         color: var(--id-primary);
     }
-    .testimonial-card:nth-child(even) .testimonial-info p {
+    .testimonial-card:nth-child(3n+2) .testimonial-info p {
         color: #666;
+    }
+    .testimonial-card:nth-child(3n+2) .testimonial-avatar {
+        background: linear-gradient(135deg, #0097A7, #00BCD4);
+    }
+    .testimonial-card:nth-child(3n+2) .testimonial-tag {
+        border-color: #0097A7;
+        color: #006064;
+        background: rgba(0, 188, 212, 0.10);
+    }
+
+    .testimonial-card:nth-child(3n) {
+        background: linear-gradient(135deg, #004D5A, #00838F);
+        box-shadow: 0 10px 40px rgba(0, 131, 143, 0.35);
+    }
+    .testimonial-card:nth-child(3n) .testimonial-text {
+        color: #E0FFFE;
+    }
+    .testimonial-card:nth-child(3n) .testimonial-info h4 {
+        color: #B2FFFE;
+    }
+    .testimonial-card:nth-child(3n) .testimonial-info p {
+        color: #80DEEA;
+    }
+    .testimonial-card:nth-child(3n)::before {
+        background: linear-gradient(135deg, rgba(255,255,255,0.35), rgba(255,255,255,0.15));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+    .testimonial-card:nth-child(3n) .testimonial-avatar {
+        background: linear-gradient(135deg, #00ACC1, #0097A7);
+    }
+    .testimonial-card:nth-child(3n) .testimonial-tag {
+        border-color: rgba(255,255,255,0.5);
+        color: #E0FFFE;
+        background: rgba(255,255,255,0.12);
     }
