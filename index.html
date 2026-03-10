@@ -1676,6 +1676,8 @@
 
         /* Nav darkened for contrast */
         .navbar { background: rgba(13,10,30,0.97) !important; }
+        .tts-read-btn:hover { transform: scale(1.05); }
+        .testimonial-cta-btn:hover { opacity: 0.85; }
 
     </style>
 </head>
@@ -1702,7 +1704,7 @@
                 font-size:0.82rem; font-weight:600;
                 display:flex; align-items:center; gap:0.4rem;
                 transition: transform 0.15s, box-shadow 0.15s;
-            " onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+            " class="tts-read-btn">
                 🔊 <span id="tts-label">Read Page</span>
             </button>
             <button onclick="stopTTS()" title="Stop reading" style="
@@ -1752,7 +1754,7 @@
         </div>
 
         <!-- Close bar -->
-        <button onclick="document.getElementById('a11y-bar').style.display='none'" style="
+        <button onclick="closeA11yBar()" style="
             position:absolute; right:1rem;
             background:none; border:none; color:rgba(255,255,255,0.5);
             cursor:pointer; font-size:1.1rem; line-height:1;
@@ -1782,6 +1784,10 @@
         let node;
         while ((node = walker.nextNode())) text += node.textContent + ' ';
         return text.trim();
+    }
+
+    function closeA11yBar() {
+        document.getElementById('a11y-bar').style.display = 'none';
     }
 
     function toggleTTS() {
@@ -3780,7 +3786,7 @@
                 <div style="font-size:2rem; margin-bottom:0.75rem;">✨</div>
                 <h3 style="font-family:'Cormorant Garamond',serif; font-size:1.5rem; color:#F5CCFF; margin-bottom:0.75rem;">Worked With Me? I'd Love to Hear From You.</h3>
                 <p style="color:#DDA8EE; line-height:1.8; font-size:0.95rem; margin-bottom:0.5rem;">Whether you were a student, a client, a colleague, or a collaborator — your words matter. Share your experience and receive a <strong style="color:#FFD6F5;">10% discount code</strong> toward your next service with me as a thank-you.</p>
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSctwX7tBc5mA58ZE8OAdH807cZQKsVqkgOuJtGCH1B2e5V_3A/viewform?usp=dialog" target="_blank" rel="noopener noreferrer" style="display:inline-block; margin-top:1.25rem; background:linear-gradient(135deg,var(--id-primary),var(--creative-primary)); color:white; padding:0.85rem 2rem; border-radius:50px; font-weight:700; font-size:0.9rem; text-decoration:none; transition:opacity 0.2s ease;" onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'">Leave a Testimonial →</a>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSctwX7tBc5mA58ZE8OAdH807cZQKsVqkgOuJtGCH1B2e5V_3A/viewform?usp=dialog" target="_blank" rel="noopener noreferrer" style="display:inline-block; margin-top:1.25rem; background:linear-gradient(135deg,var(--id-primary),var(--creative-primary)); color:white; padding:0.85rem 2rem; border-radius:50px; font-weight:700; font-size:0.9rem; text-decoration:none; transition:opacity 0.2s ease;" class="testimonial-cta-btn">Leave a Testimonial →</a>
             </div>
 
         </div>
