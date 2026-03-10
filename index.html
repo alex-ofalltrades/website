@@ -43,6 +43,33 @@
     <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
     
     <link rel="stylesheet" href="style.css">
+<noscript>
+    <style>
+        /* Tarot chapter bodies: show expanded without JS */
+        .tarot-chapter-body { display: block; }
+
+        /* Pricing modals: render inline instead of as overlays */
+        .pricing-modal {
+            display: block;
+            position: static;
+            background: transparent;
+            padding: 2rem 0;
+            z-index: auto;
+        }
+        .pricing-modal .pricing-content {
+            max-height: none;
+            overflow: visible;
+            margin: 0 auto;
+        }
+        .modal-close { display: none; }
+
+        /* Quiz: hide interactive wrapper, noscript message shows instead */
+        #alex-quiz { display: none; }
+
+        /* Accessibility toolbar: JS-only, hide */
+        #a11y-bar { display: none; }
+    </style>
+</noscript>
 </head>
 <body>
     <!-- ── Accessibility Toolbar: TTS + Translate ───────────────────────── -->
@@ -392,7 +419,13 @@
             <div class="quiz-col">
                 <div class="quiz-col-label">Not sure where to start?</div>
 
-            <!-- QUIZ WRAPPER -->
+<noscript>
+                <div style="background:#fff8ff; border:1.5px solid var(--id-primary); border-radius:16px; padding:1.8rem 1.5rem; text-align:center; color:var(--deep-text);">
+                    <p style="font-size:1rem; line-height:1.7; margin-bottom:1rem;">The interactive quiz requires JavaScript to run.</p>
+                    <p style="font-size:0.9rem; line-height:1.7;">Not sure which service fits? <a href="#contact" style="color:var(--id-primary); font-weight:700;">Reach out directly</a> and I'll help you find the right fit.</p>
+                </div>
+            </noscript>
+                        <!-- QUIZ WRAPPER -->
             <div id="alex-quiz" class="aq-wrapper">
 
                 <!-- PROGRESS BAR -->
