@@ -451,24 +451,24 @@
                         <h3 class="aq-q-text">What brings you here today?</h3>
                         <p class="aq-q-sub">Choose the one that feels most true right now.</p>
                         <div class="aq-options">
-                            <button class="aq-opt" data-value="child" onclick="aqAnswer(1,'child',this)">
+                            <button type="button" class="aq-opt" data-value="child">
                                 <span class="aq-opt-icon">👧</span>
                                 <span class="aq-opt-text">My child is struggling in school and I don't know what to do</span>
                             </button>
-                            <button class="aq-opt" data-value="org" onclick="aqAnswer(1,'org',this)">
+                            <button type="button" class="aq-opt" data-value="org">
                                 <span class="aq-opt-icon">🏢</span>
                                 <span class="aq-opt-text">My organization needs better training, curriculum, or learning design</span>
                             </button>
-                            <button class="aq-opt" data-value="stuck" onclick="aqAnswer(1,'stuck',this)">
+                            <button type="button" class="aq-opt" data-value="stuck">
                                 <span class="aq-opt-icon">🌀</span>
                                 <span class="aq-opt-text">I feel stuck and I'm looking for clarity and direction in my life</span>
                             </button>
-                            <button class="aq-opt" data-value="all" onclick="aqAnswer(1,'all',this)">
+                            <button type="button" class="aq-opt" data-value="all">
                                 <span class="aq-opt-icon">✨</span>
                                 <span class="aq-opt-text">Honestly? All of the above. It's a lot.</span>
                             </button>
                         
-                            <button class="aq-opt aq-other-btn" data-value="other" onclick="aqToggleOther(1, this)">
+                            <button type="button" class="aq-opt aq-other-btn" data-value="other">
                                 <span class="aq-opt-icon">✏️</span>
                                 <span class="aq-opt-text">Other — I'll describe it in my own words</span>
                             </button>
@@ -476,6 +476,9 @@
                                 <textarea class="aq-other-input" id="aq-other-input-1" placeholder="Tell me in your own words..." rows="3" aria-label="Describe your situation in your own words"></textarea>
                                 <button class="aq-other-submit" onclick="aqSubmitOther(1)">Continue →</button>
                             </div>
+                        </div>
+                        <div class="aq-next-wrap" style="display:none;">
+                            <button type="button" class="aq-next-btn" onclick="aqAdvance(1)">Next Question →</button>
                         </div>
                     </div>
 
@@ -485,20 +488,20 @@
                         <h3 class="aq-q-text">How urgent does this feel?</h3>
                         <p class="aq-q-sub">There's no wrong answer here.</p>
                         <div class="aq-options">
-                            <button class="aq-opt" data-value="now" onclick="aqAnswer(2,'now',this)">
+                            <button type="button" class="aq-opt" data-value="now">
                                 <span class="aq-opt-icon">🔥</span>
                                 <span class="aq-opt-text">There's a meeting, deadline, or crisis happening now</span>
                             </button>
-                            <button class="aq-opt" data-value="soon" onclick="aqAnswer(2,'soon',this)">
+                            <button type="button" class="aq-opt" data-value="soon">
                                 <span class="aq-opt-icon">📆</span>
                                 <span class="aq-opt-text">Things are building and I want to get ahead of it</span>
                             </button>
-                            <button class="aq-opt" data-value="explore" onclick="aqAnswer(2,'explore',this)">
+                            <button type="button" class="aq-opt" data-value="explore">
                                 <span class="aq-opt-icon">🌱</span>
                                 <span class="aq-opt-text">No rush — I'm exploring what's possible</span>
                             </button>
                         
-                            <button class="aq-opt aq-other-btn" data-value="other" onclick="aqToggleOther(2, this)">
+                            <button type="button" class="aq-opt aq-other-btn" data-value="other">
                                 <span class="aq-opt-icon">✏️</span>
                                 <span class="aq-opt-text">Other — I'll describe it in my own words</span>
                             </button>
@@ -506,6 +509,9 @@
                                 <textarea class="aq-other-input" id="aq-other-input-2" placeholder="Tell me in your own words..." rows="3" aria-label="Describe how urgent this feels in your own words"></textarea>
                                 <button class="aq-other-submit" onclick="aqSubmitOther(2)">Continue →</button>
                             </div>
+                        </div>
+                        <div class="aq-next-wrap" style="display:none;">
+                            <button type="button" class="aq-next-btn" onclick="aqAdvance(2)">Next Question →</button>
                         </div>
                     </div>
 
@@ -515,24 +521,24 @@
                         <h3 class="aq-q-text">What does success look like for you?</h3>
                         <p class="aq-q-sub">Pick the one that resonates most.</p>
                         <div class="aq-options">
-                            <button class="aq-opt" data-value="plan" onclick="aqAnswer(3,'plan',this)">
+                            <button type="button" class="aq-opt" data-value="plan">
                                 <span class="aq-opt-icon">📋</span>
                                 <span class="aq-opt-text">A concrete plan, document, or system I can use immediately</span>
                             </button>
-                            <button class="aq-opt" data-value="capacity" onclick="aqAnswer(3,'capacity',this)">
+                            <button type="button" class="aq-opt" data-value="capacity">
                                 <span class="aq-opt-icon">🧠</span>
                                 <span class="aq-opt-text">Building my skills so I can handle this myself long-term</span>
                             </button>
-                            <button class="aq-opt" data-value="advocate" onclick="aqAnswer(3,'advocate',this)">
+                            <button type="button" class="aq-opt" data-value="advocate">
                                 <span class="aq-opt-icon">🛡️</span>
                                 <span class="aq-opt-text">Someone in my corner who knows the system and speaks the language</span>
                             </button>
-                            <button class="aq-opt" data-value="clarity" onclick="aqAnswer(3,'clarity',this)">
+                            <button type="button" class="aq-opt" data-value="clarity">
                                 <span class="aq-opt-icon">🔮</span>
                                 <span class="aq-opt-text">I need clarity first. I'll figure out the rest once I can see clearly.</span>
                             </button>
                         
-                            <button class="aq-opt aq-other-btn" data-value="other" onclick="aqToggleOther(3, this)">
+                            <button type="button" class="aq-opt aq-other-btn" data-value="other">
                                 <span class="aq-opt-icon">✏️</span>
                                 <span class="aq-opt-text">Other — I'll describe it in my own words</span>
                             </button>
@@ -540,6 +546,9 @@
                                 <textarea class="aq-other-input" id="aq-other-input-3" placeholder="Tell me in your own words..." rows="3" aria-label="Describe what success looks like in your own words"></textarea>
                                 <button class="aq-other-submit" onclick="aqSubmitOther(3)">Continue →</button>
                             </div>
+                        </div>
+                        <div class="aq-next-wrap" style="display:none;">
+                            <button type="button" class="aq-next-btn" onclick="aqAdvance(3)">Next Question →</button>
                         </div>
                     </div>
 
@@ -549,24 +558,24 @@
                         <h3 class="aq-q-text">Who else is involved?</h3>
                         <p class="aq-q-sub">Help me understand your ecosystem.</p>
                         <div class="aq-options">
-                            <button class="aq-opt" data-value="solo" onclick="aqAnswer(4,'solo',this)">
+                            <button type="button" class="aq-opt" data-value="solo">
                                 <span class="aq-opt-icon">🙋</span>
                                 <span class="aq-opt-text">Just me — this is personal</span>
                             </button>
-                            <button class="aq-opt" data-value="family" onclick="aqAnswer(4,'family',this)">
+                            <button type="button" class="aq-opt" data-value="family">
                                 <span class="aq-opt-icon">👨‍👩‍👧</span>
                                 <span class="aq-opt-text">My family — especially a child or young person</span>
                             </button>
-                            <button class="aq-opt" data-value="team" onclick="aqAnswer(4,'team',this)">
+                            <button type="button" class="aq-opt" data-value="team">
                                 <span class="aq-opt-icon">👥</span>
                                 <span class="aq-opt-text">A team, staff, or organization</span>
                             </button>
-                            <button class="aq-opt" data-value="community" onclick="aqAnswer(4,'community',this)">
+                            <button type="button" class="aq-opt" data-value="community">
                                 <span class="aq-opt-icon">🌍</span>
                                 <span class="aq-opt-text">A broader community or group</span>
                             </button>
                         
-                            <button class="aq-opt aq-other-btn" data-value="other" onclick="aqToggleOther(4, this)">
+                            <button type="button" class="aq-opt aq-other-btn" data-value="other">
                                 <span class="aq-opt-icon">✏️</span>
                                 <span class="aq-opt-text">Other — I'll describe it in my own words</span>
                             </button>
@@ -574,6 +583,9 @@
                                 <textarea class="aq-other-input" id="aq-other-input-4" placeholder="Tell me in your own words..." rows="3" aria-label="Describe your answer in your own words"></textarea>
                                 <button class="aq-other-submit" onclick="aqSubmitOther(4)">Continue →</button>
                             </div>
+                        </div>
+                        <div class="aq-next-wrap" style="display:none;">
+                            <button type="button" class="aq-next-btn" onclick="aqAdvance(4)">Next Question →</button>
                         </div>
                     </div>
 
@@ -583,24 +595,24 @@
                         <h3 class="aq-q-text">What's the biggest barrier right now?</h3>
                         <p class="aq-q-sub">Be honest — this helps me be more useful to you.</p>
                         <div class="aq-options">
-                            <button class="aq-opt" data-value="knowledge" onclick="aqAnswer(5,'knowledge',this)">
+                            <button type="button" class="aq-opt" data-value="knowledge">
                                 <span class="aq-opt-icon">📖</span>
                                 <span class="aq-opt-text">I don't know enough — I need an expert who does</span>
                             </button>
-                            <button class="aq-opt" data-value="overwhelm" onclick="aqAnswer(5,'overwhelm',this)">
+                            <button type="button" class="aq-opt" data-value="overwhelm">
                                 <span class="aq-opt-icon">😮‍💨</span>
                                 <span class="aq-opt-text">I'm overwhelmed — there's too much and I don't know where to start</span>
                             </button>
-                            <button class="aq-opt" data-value="system" onclick="aqAnswer(5,'system',this)">
+                            <button type="button" class="aq-opt" data-value="system">
                                 <span class="aq-opt-icon">🧩</span>
                                 <span class="aq-opt-text">The system isn't working — I need someone who can navigate it with me</span>
                             </button>
-                            <button class="aq-opt" data-value="direction" onclick="aqAnswer(5,'direction',this)">
+                            <button type="button" class="aq-opt" data-value="direction">
                                 <span class="aq-opt-icon">🧭</span>
                                 <span class="aq-opt-text">I've lost my direction — I need to reconnect with what matters</span>
                             </button>
                         
-                            <button class="aq-opt aq-other-btn" data-value="other" onclick="aqToggleOther(5, this)">
+                            <button type="button" class="aq-opt aq-other-btn" data-value="other">
                                 <span class="aq-opt-icon">✏️</span>
                                 <span class="aq-opt-text">Other — I'll describe it in my own words</span>
                             </button>
@@ -608,6 +620,9 @@
                                 <textarea class="aq-other-input" id="aq-other-input-5" placeholder="Tell me in your own words..." rows="3" aria-label="Describe your situation in your own words"></textarea>
                                 <button class="aq-other-submit" onclick="aqSubmitOther(5)">Continue →</button>
                             </div>
+                        </div>
+                        <div class="aq-next-wrap" style="display:none;">
+                            <button type="button" class="aq-next-btn" onclick="aqAdvance(5)">Next Question →</button>
                         </div>
                     </div>
 
@@ -617,24 +632,24 @@
                         <h3 class="aq-q-text">How do you prefer to work together?</h3>
                         <p class="aq-q-sub">This helps me recommend the right format.</p>
                         <div class="aq-options">
-                            <button class="aq-opt" data-value="oneoff" onclick="aqAnswer(6,'oneoff',this)">
+                            <button type="button" class="aq-opt" data-value="oneoff">
                                 <span class="aq-opt-icon">⚡</span>
                                 <span class="aq-opt-text">One focused session to get what I need fast</span>
                             </button>
-                            <button class="aq-opt" data-value="series" onclick="aqAnswer(6,'series',this)">
+                            <button type="button" class="aq-opt" data-value="series">
                                 <span class="aq-opt-icon">🔄</span>
                                 <span class="aq-opt-text">A series of sessions over time — I want sustained support</span>
                             </button>
-                            <button class="aq-opt" data-value="project" onclick="aqAnswer(6,'project',this)">
+                            <button type="button" class="aq-opt" data-value="project">
                                 <span class="aq-opt-icon">🗂️</span>
                                 <span class="aq-opt-text">A project engagement — deliverable-based work</span>
                             </button>
-                            <button class="aq-opt" data-value="unsure" onclick="aqAnswer(6,'unsure',this)">
+                            <button type="button" class="aq-opt" data-value="unsure">
                                 <span class="aq-opt-icon">🤷</span>
                                 <span class="aq-opt-text">I'm not sure yet — help me figure that out too</span>
                             </button>
                         
-                            <button class="aq-opt aq-other-btn" data-value="other" onclick="aqToggleOther(6, this)">
+                            <button type="button" class="aq-opt aq-other-btn" data-value="other">
                                 <span class="aq-opt-icon">✏️</span>
                                 <span class="aq-opt-text">Other — I'll describe it in my own words</span>
                             </button>
@@ -642,6 +657,9 @@
                                 <textarea class="aq-other-input" id="aq-other-input-6" placeholder="Tell me in your own words..." rows="3" aria-label="Any other details you'd like to share"></textarea>
                                 <button class="aq-other-submit" onclick="aqSubmitOther(6)">Continue →</button>
                             </div>
+                        </div>
+                        <div class="aq-next-wrap" style="display:none;">
+                            <button type="button" class="aq-next-btn" onclick="aqAdvance(6)">See My Results →</button>
                         </div>
                     </div>
 
@@ -682,6 +700,8 @@
     const aqAnswers = {};
     const aqTotal = 6;
 
+    const aqAdvanced = {};
+
     function aqAnswer(q, value, btn) {
         aqAnswers[q] = value;
 
@@ -690,20 +710,35 @@
         question.querySelectorAll('.aq-opt').forEach(b => b.classList.remove('selected'));
         if (btn) btn.classList.add('selected');
 
-        // Short delay then advance
-        setTimeout(() => {
-            if (q < aqTotal) {
-                aqGo(q + 1);
-            } else {
-                aqShowResults();
-            }
-        }, 320);
+        // Show explicit Next button so user always has a clear action
+        const nextWrap = question.querySelector('.aq-next-wrap');
+        if (nextWrap) nextWrap.style.display = 'block';
+    }
+
+    function aqAdvance(q) {
+        // Guard against double-fire (Next button + any residual auto-advance)
+        if (aqAdvanced[q]) return;
+        aqAdvanced[q] = true;
+        if (q < aqTotal) {
+            aqGo(q + 1);
+        } else {
+            aqShowResults();
+        }
     }
 
     function aqGo(next) {
-        document.querySelectorAll('.aq-question').forEach(q => q.classList.remove('active'));
+        // Use explicit style.display so it works regardless of CSS class resolution
+        document.querySelectorAll('.aq-question').forEach(q => {
+            q.classList.remove('active');
+            q.style.display = 'none';
+            const nw = q.querySelector('.aq-next-wrap');
+            if (nw) nw.style.display = 'none';
+        });
         const nextQ = document.querySelector(`.aq-question[data-q="${next}"]`);
-        if (nextQ) nextQ.classList.add('active');
+        if (nextQ) {
+            nextQ.classList.add('active');
+            nextQ.style.display = 'block';
+        }
 
         // Update progress
         const pct = (next / aqTotal) * 100;
@@ -900,23 +935,44 @@
         aqAnswers[q] = 'other';
         aqAnswers[`${q}_text`] = text;
 
-        if (q < aqTotal) {
-            aqGo(q + 1);
-        } else {
-            aqShowResults();
-        }
+        aqAdvance(q);
     }
 
     function aqRestart() {
         Object.keys(aqAnswers).forEach(k => delete aqAnswers[k]);
+        Object.keys(aqAdvanced).forEach(k => delete aqAdvanced[k]);
         document.querySelectorAll('.aq-opt').forEach(b => b.classList.remove('selected'));
+        document.querySelectorAll('.aq-next-wrap').forEach(w => w.style.display = 'none');
         document.getElementById('aq-results').classList.add('hidden');
         document.getElementById('aq-questions').classList.remove('hidden');
         document.getElementById('aq-progress').style.width = '16.6%';
         document.getElementById('aq-progress-label').textContent = 'Question 1 of 6';
-        document.querySelectorAll('.aq-question').forEach(q => q.classList.remove('active'));
-        document.querySelector('.aq-question[data-q="1"]').classList.add('active');
+        document.querySelectorAll('.aq-question').forEach(q => {
+            q.classList.remove('active');
+            q.style.display = 'none';
+        });
+        const firstQ = document.querySelector('.aq-question[data-q="1"]');
+        if (firstQ) { firstQ.classList.add('active'); firstQ.style.display = 'block'; }
     }
+
+    // Event delegation: catches clicks even if Cloudflare defers inline scripts
+    document.addEventListener('DOMContentLoaded', function () {
+        var quiz = document.getElementById('alex-quiz');
+        if (!quiz) return;
+        quiz.addEventListener('click', function (e) {
+            var btn = e.target.closest('.aq-opt');
+            if (!btn) return;
+            var question = btn.closest('.aq-question');
+            if (!question) return;
+            var q = parseInt(question.dataset.q, 10);
+            var value = btn.dataset.value;
+            if (value === 'other') {
+                aqToggleOther(q, btn);
+            } else {
+                aqAnswer(q, value, btn);
+            }
+        });
+    });
     </script>
 
     <!-- Alex of All Trades Brand Section -->

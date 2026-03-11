@@ -2028,6 +2028,28 @@
         box-shadow: 0 6px 22px rgba(192,21,144,0.35);
     }
 
+    /* Explicit Next / Results button shown after each answer */
+    .aq-next-wrap {
+        margin-top: 1.25rem;
+        text-align: right;
+    }
+    .aq-next-btn {
+        background: linear-gradient(135deg, #E65100, #C01590);
+        color: white;
+        border: none;
+        border-radius: 12px;
+        padding: 0.75rem 1.5rem;
+        font-size: 0.95rem;
+        font-weight: 700;
+        cursor: pointer;
+        transition: opacity 0.2s, transform 0.2s;
+        box-shadow: 0 4px 16px rgba(230,81,0,0.25);
+    }
+    .aq-next-btn:hover {
+        opacity: 0.88;
+        transform: translateY(-2px);
+    }
+
     @media (max-width: 600px) {
         .aq-opt { padding: 1rem 1rem; }
         .aq-opt-icon { font-size: 1.2rem; }
