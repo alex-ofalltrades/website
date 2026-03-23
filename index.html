@@ -231,17 +231,20 @@
     <nav>
         <div class="container">
             <a href="#home" class="logo">Alex of All Trades</a>
+            <div class="nav-right">
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#journey">Journey</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#resumes">Resumes</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <a href="#services" class="nav-book-btn">Book Now</a>
+            </div>
             <button class="mobile-menu-btn" aria-label="Menu">☰</button>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#journey">Journey</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#testimonials">Testimonials</a></li>
-                <li><a href="#resumes">Resumes</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
         </div>
     </nav>
 
@@ -279,26 +282,29 @@
     <section class="aot-section">
         <div class="container">
             <div class="aot-headline">Alex of All Trades:<br>Progress begets Permanence.</div>
-            <p class="aot-sub">The tools of my trade. Click any to explore services.</p>
+            <p class="aot-sub">Tap any skill pill below — it opens that service's full menu so you can browse packages and book directly.</p>
             <div class="aot-grid">
-                <!-- Special Education -->
-                <div class="aot-badge" onclick="openPricing('special-education')" style="cursor:pointer;" title="View Special Education Advocacy"><span>🎓</span> M.Ed. Special Education</div>
-                <div class="aot-badge" onclick="openPricing('special-education')" style="cursor:pointer;" title="View Special Education Advocacy"><span>📋</span> IEP Advocacy & Systems</div>
-                <!-- Instructional Design -->
-                <div class="aot-badge" onclick="openPricing('instructional')" style="cursor:pointer;" title="View Instructional Design & AI Production"><span>📚</span> Curriculum Design (ADDIE)</div>
-                <div class="aot-badge" onclick="openPricing('instructional')" style="cursor:pointer;" title="View Instructional Design & AI Production"><span>🤖</span> AI Tools & Agent Training</div>
-                <div class="aot-badge" onclick="openPricing('instructional')" style="cursor:pointer;" title="View Instructional Design & AI Production"><span>🎙️</span> Zoom Event Production</div>
-                <div class="aot-badge" onclick="openPricing('instructional')" style="cursor:pointer;" title="View Instructional Design & AI Production"><span>✍️</span> Copyediting & Content</div>
-                <div class="aot-badge" onclick="openPricing('instructional')" style="cursor:pointer;" title="View Instructional Design & AI Production"><span>🏫</span> Teacher Training & PD</div>
-                <div class="aot-badge" onclick="openPricing('instructional')" style="cursor:pointer;" title="View Instructional Design & AI Production"><span>📊</span> Data-Driven Outcomes</div>
-                <div class="aot-badge" onclick="openPricing('instructional')" style="cursor:pointer;" title="View Instructional Design & AI Production"><span>🌐</span> LMS & Ed-Tech Integration</div>
-                <div class="aot-badge" onclick="openPricing('instructional')" style="cursor:pointer;" title="View Instructional Design & AI Production"><span>⚡</span> Engagement Practices</div>
-                <!-- Tarot / Spiritual -->
-                <div class="aot-badge" onclick="openPricing('tarot')" style="cursor:pointer;" title="View Tarot & Spiritual Guidance"><span>🔮</span> Tarot & Intuitive Guidance</div>
-                <div class="aot-badge" onclick="openPricing('tarot')" style="cursor:pointer;" title="View Tarot & Spiritual Guidance"><span>🌙</span> Moon Circles & Community</div>
-                <div class="aot-badge" onclick="openPricing('tarot')" style="cursor:pointer;" title="View Tarot & Spiritual Guidance"><span>🎪</span> Event Planning & Coordination</div>
-                <div class="aot-badge" onclick="openPricing('tarot')" style="cursor:pointer;" title="View Tarot & Spiritual Guidance"><span>🎨</span> Arts & Technology Integration</div>
-                <div class="aot-badge" onclick="openPricing('tarot')" style="cursor:pointer;" title="View Tarot & Spiritual Guidance"><span>🤝</span> Community Building</div>
+                <!-- Special Education group -->
+                <div class="aot-group-label aot-group--sped" onclick="openPricing('special-education')" role="button" aria-label="Open Special Education Advocacy services">🎓 Special Education Advocacy → tap a pill to book</div>
+                <div class="aot-badge aot-badge--sped" onclick="openPricing('special-education')" style="cursor:pointer;" title="Open Special Education Advocacy"><span>🎓</span> M.Ed. Special Education</div>
+                <div class="aot-badge aot-badge--sped" onclick="openPricing('special-education')" style="cursor:pointer;" title="Open Special Education Advocacy"><span>📋</span> IEP Advocacy & Systems</div>
+                <!-- Instructional Design group -->
+                <div class="aot-group-label aot-group--id" onclick="openPricing('instructional')" role="button" aria-label="Open Instructional Design services">📚 Instructional Design & AI → tap a pill to book</div>
+                <div class="aot-badge aot-badge--id" onclick="openPricing('instructional')" style="cursor:pointer;" title="Open Instructional Design & AI Production"><span>📚</span> Curriculum Design (ADDIE)</div>
+                <div class="aot-badge aot-badge--id" onclick="openPricing('instructional')" style="cursor:pointer;" title="Open Instructional Design & AI Production"><span>🤖</span> AI Tools & Agent Training</div>
+                <div class="aot-badge aot-badge--id" onclick="openPricing('instructional')" style="cursor:pointer;" title="Open Instructional Design & AI Production"><span>🎙️</span> Zoom Event Production</div>
+                <div class="aot-badge aot-badge--id" onclick="openPricing('instructional')" style="cursor:pointer;" title="Open Instructional Design & AI Production"><span>✍️</span> Copyediting & Content</div>
+                <div class="aot-badge aot-badge--id" onclick="openPricing('instructional')" style="cursor:pointer;" title="Open Instructional Design & AI Production"><span>🏫</span> Teacher Training & PD</div>
+                <div class="aot-badge aot-badge--id" onclick="openPricing('instructional')" style="cursor:pointer;" title="Open Instructional Design & AI Production"><span>📊</span> Data-Driven Outcomes</div>
+                <div class="aot-badge aot-badge--id" onclick="openPricing('instructional')" style="cursor:pointer;" title="Open Instructional Design & AI Production"><span>🌐</span> LMS & Ed-Tech Integration</div>
+                <div class="aot-badge aot-badge--id" onclick="openPricing('instructional')" style="cursor:pointer;" title="Open Instructional Design & AI Production"><span>⚡</span> Engagement Practices</div>
+                <!-- Tarot / Spiritual group -->
+                <div class="aot-group-label aot-group--tarot" onclick="openPricing('tarot')" role="button" aria-label="Open Arts & Spiritual services">🔮 Arts, Tarot & Community → tap a pill to book</div>
+                <div class="aot-badge aot-badge--tarot" onclick="openPricing('tarot')" style="cursor:pointer;" title="Open Tarot & Spiritual Guidance"><span>🔮</span> Tarot & Intuitive Guidance</div>
+                <div class="aot-badge aot-badge--tarot" onclick="openPricing('tarot')" style="cursor:pointer;" title="Open Tarot & Spiritual Guidance"><span>🌙</span> Moon Circles & Community</div>
+                <div class="aot-badge aot-badge--tarot" onclick="openPricing('tarot')" style="cursor:pointer;" title="Open Tarot & Spiritual Guidance"><span>🎪</span> Event Planning & Coordination</div>
+                <div class="aot-badge aot-badge--tarot" onclick="openPricing('tarot')" style="cursor:pointer;" title="Open Tarot & Spiritual Guidance"><span>🎨</span> Arts & Technology Integration</div>
+                <div class="aot-badge aot-badge--tarot" onclick="openPricing('tarot')" style="cursor:pointer;" title="Open Tarot & Spiritual Guidance"><span>🤝</span> Community Building</div>
             </div>
         </div>
     </section>
@@ -1627,9 +1633,16 @@
         </div>
     </footer>
 
-    <!-- Floating Book Button -->
+    <!-- Floating Book Button (desktop/tablet) -->
     <div class="book-float">
-        <a href="#services" class="btn btn-primary">📅 Start Your Journey</a>
+        <a href="#services" class="btn btn-primary">📅 Book a Service</a>
+    </div>
+
+    <!-- Mobile Sticky Bottom CTA Bar -->
+    <div class="mobile-cta-bar">
+        <button onclick="openPricing('special-education')" class="mobile-cta-btn mcb-sped">🎓 SpEd</button>
+        <button onclick="openPricing('instructional')" class="mobile-cta-btn mcb-id">📚 Instructional</button>
+        <button onclick="openPricing('tarot')" class="mobile-cta-btn mcb-tarot">🔮 Tarot</button>
     </div>
 
     <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
