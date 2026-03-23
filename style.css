@@ -1115,27 +1115,6 @@
         }
 
         /* Resumes Section */
-        .resumes {
-            padding: 8rem 2rem;
-            background: #F3E5F5;
-            color: #3B0057;
-            border-top: 5px solid #9575CD;
-        }
-
-        .resumes .section-header h2 {
-            background: linear-gradient(135deg, var(--id-primary), var(--sped-lavender));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .resumes .section-header p {
-            color: #6A1A9A;
-        }
-
-        .resumes .underline {
-            background: linear-gradient(90deg, var(--id-primary), var(--sped-lavender), var(--sped-primary));
-        }
 
         .resumes-grid {
             display: grid;
@@ -1651,6 +1630,160 @@
             overflow: hidden;
             border-top: 5px solid #C0159A;
         }
+
+        /* ── Two-Lens Intro ── */
+        .story-lenses {
+            display: flex;
+            align-items: stretch;
+            gap: 0;
+            max-width: 860px;
+            margin: 3rem auto 4rem;
+            background: rgba(255,255,255,0.06);
+            border: 1px solid rgba(255,255,255,0.12);
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .story-lens {
+            flex: 1;
+            padding: 2.2rem 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 0.75rem;
+        }
+
+        .story-lens--resume { border-right: 1px solid rgba(255,255,255,0.1); }
+
+        .story-lens-icon {
+            font-size: 2.2rem;
+            line-height: 1;
+        }
+
+        .story-lens h3 {
+            font-family: 'Fraunces', serif;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #FFD6F0;
+            margin: 0;
+        }
+
+        .story-lens p {
+            font-size: 0.875rem;
+            color: #E0AADC;
+            line-height: 1.65;
+            margin: 0;
+        }
+
+        .story-lens-divider {
+            display: flex;
+            align-items: center;
+            padding: 0 0.75rem;
+            color: rgba(255,255,255,0.3);
+            font-size: 1.1rem;
+            flex-shrink: 0;
+        }
+
+        /* ── Story Parts (Resume + Tarot sub-sections) ── */
+        .story-part {
+            margin-top: 2rem;
+        }
+
+        .story-part-header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+
+        .story-part-badge {
+            display: inline-block;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            padding: 0.35rem 1.1rem;
+            border-radius: 50px;
+            margin-bottom: 1rem;
+        }
+
+        .story-part-header--resume .story-part-badge {
+            background: rgba(142,68,173,0.25);
+            color: #DDB6F8;
+            border: 1px solid rgba(142,68,173,0.4);
+        }
+
+        .story-part-header--tarot .story-part-badge {
+            background: rgba(255,107,53,0.2);
+            color: #FFD6B0;
+            border: 1px solid rgba(255,107,53,0.35);
+        }
+
+        .story-part-header h3 {
+            font-family: 'Fraunces', serif;
+            font-size: clamp(1.6rem, 3vw, 2.4rem);
+            font-weight: 800;
+            color: #FFD6F0;
+            margin: 0 0 0.75rem;
+            line-height: 1.2;
+        }
+
+        .story-part-header p {
+            color: #E0AADC;
+            font-size: 0.95rem;
+            line-height: 1.75;
+            max-width: 680px;
+            margin: 0 auto;
+        }
+
+        /* Resume cards inside the dark journey section */
+        .story-part .resume-card {
+            background: rgba(255,255,255,0.97);
+        }
+
+        /* ── Bridge Divider ── */
+        .story-bridge {
+            text-align: center;
+            padding: 3.5rem 1rem;
+            position: relative;
+        }
+
+        .story-bridge::before,
+        .story-bridge::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            width: 30%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.18));
+        }
+        .story-bridge::before { left: 0; }
+        .story-bridge::after  { right: 0; transform: scaleX(-1); }
+
+        .story-bridge-text {
+            font-family: 'Fraunces', serif;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: rgba(255,214,240,0.55);
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            background: #2D0030;
+            padding: 0 1.5rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        @media (max-width: 640px) {
+            .story-lenses {
+                flex-direction: column;
+            }
+            .story-lens--resume {
+                border-right: none;
+                border-bottom: 1px solid rgba(255,255,255,0.1);
+            }
+            .story-lens-divider { display: none; }
+        }
+
 
         .journey::before {
             content: '';
