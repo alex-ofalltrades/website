@@ -238,6 +238,7 @@
                     <li><a href="#services">Services</a></li>
                     <li><a href="#journey">My Professional Experience</a></li>
                     <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#artshop">Art Shop</a></li>
                     <li><a href="#testimonials">Testimonials</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
@@ -1456,6 +1457,191 @@
         </div>
     </section>
 
+    <!-- Art Shop Section -->
+    <section id="artshop" class="art-shop">
+        <div class="container">
+            <div class="section-header">
+                <h2>The Studio Shop</h2>
+                <div class="underline"></div>
+                <p>Original art, prints, and handcrafted pieces — each one made with intention. Request a piece or commission something uniquely yours.</p>
+            </div>
+
+            <!-- Category filter -->
+            <div class="shop-categories">
+                <button class="shop-cat-btn active" data-cat="all">All</button>
+                <button class="shop-cat-btn" data-cat="prints">🖼 Prints</button>
+                <button class="shop-cat-btn" data-cat="originals">✨ Originals</button>
+                <button class="shop-cat-btn" data-cat="commissions">🎨 Commissions</button>
+                <button class="shop-cat-btn" data-cat="accessories">💫 Accessories</button>
+            </div>
+
+            <!-- Art grid -->
+            <div class="art-grid">
+
+                <!-- Placeholder 1 — Print -->
+                <div class="art-card" data-cat="prints">
+                    <div class="art-image-placeholder" style="background: linear-gradient(135deg, #C026D3, #7C3AED, #3B82F6);">
+                        <span class="art-placeholder-icon">🖼</span>
+                        <span class="art-placeholder-label">Your artwork here</span>
+                    </div>
+                    <div class="art-card-body">
+                        <span class="art-badge prints">Print</span>
+                        <h3>Untitled No. 1</h3>
+                        <p class="art-medium">Mixed media on paper</p>
+                        <p class="art-desc">Archival-quality giclee prints available in multiple sizes. Printed on heavyweight matte fine-art paper.</p>
+                        <div class="art-footer">
+                            <span class="art-price">From $35</span>
+                            <button class="art-inquire-btn" onclick="openArtInquiry('Untitled No. 1 — Print')">Inquire</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Placeholder 2 — Original -->
+                <div class="art-card" data-cat="originals">
+                    <div class="art-image-placeholder" style="background: linear-gradient(135deg, #F59E0B, #EF4444, #9C27B0);">
+                        <span class="art-placeholder-icon">✨</span>
+                        <span class="art-placeholder-label">Your artwork here</span>
+                    </div>
+                    <div class="art-card-body">
+                        <span class="art-badge originals">Original</span>
+                        <h3>Untitled No. 2</h3>
+                        <p class="art-medium">Acrylic on canvas</p>
+                        <p class="art-desc">One-of-a-kind original. Ships with a certificate of authenticity and artist's note.</p>
+                        <div class="art-footer">
+                            <span class="art-price">Inquire for price</span>
+                            <button class="art-inquire-btn" onclick="openArtInquiry('Untitled No. 2 — Original')">Inquire</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Placeholder 3 — Commission -->
+                <div class="art-card" data-cat="commissions">
+                    <div class="art-image-placeholder" style="background: linear-gradient(135deg, #10B981, #3B82F6, #8B5CF6);">
+                        <span class="art-placeholder-icon">🎨</span>
+                        <span class="art-placeholder-label">Made just for you</span>
+                    </div>
+                    <div class="art-card-body">
+                        <span class="art-badge commissions">Commission</span>
+                        <h3>Custom Portrait</h3>
+                        <p class="art-medium">Your choice of medium</p>
+                        <p class="art-desc">Bespoke pieces made entirely to your vision — people, pets, places, or abstract concepts. Tell me what you have in mind.</p>
+                        <div class="art-footer">
+                            <span class="art-price">Starting at $150</span>
+                            <button class="art-inquire-btn" onclick="openArtInquiry('Custom Commission')">Inquire</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Placeholder 4 — Accessory -->
+                <div class="art-card" data-cat="accessories">
+                    <div class="art-image-placeholder" style="background: linear-gradient(135deg, #F97316, #EC4899, #A855F7);">
+                        <span class="art-placeholder-icon">💫</span>
+                        <span class="art-placeholder-label">Your artwork here</span>
+                    </div>
+                    <div class="art-card-body">
+                        <span class="art-badge accessories">Accessory</span>
+                        <h3>Handmade Item</h3>
+                        <p class="art-medium">Hand-crafted</p>
+                        <p class="art-desc">Wearable and functional art for everyday life. Each piece is one-of-a-kind or made in small batches.</p>
+                        <div class="art-footer">
+                            <span class="art-price">From $20</span>
+                            <button class="art-inquire-btn" onclick="openArtInquiry('Handmade Accessory')">Inquire</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Placeholder 5 — Print -->
+                <div class="art-card" data-cat="prints">
+                    <div class="art-image-placeholder" style="background: linear-gradient(135deg, #06B6D4, #10B981, #84CC16);">
+                        <span class="art-placeholder-icon">🖼</span>
+                        <span class="art-placeholder-label">Your artwork here</span>
+                    </div>
+                    <div class="art-card-body">
+                        <span class="art-badge prints">Print</span>
+                        <h3>Untitled No. 3</h3>
+                        <p class="art-medium">Digital illustration</p>
+                        <p class="art-desc">High-resolution digital prints on archival paper. Available in 8×10, 11×14, and 16×20.</p>
+                        <div class="art-footer">
+                            <span class="art-price">From $40</span>
+                            <button class="art-inquire-btn" onclick="openArtInquiry('Untitled No. 3 — Print')">Inquire</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Placeholder 6 — Original -->
+                <div class="art-card" data-cat="originals">
+                    <div class="art-image-placeholder" style="background: linear-gradient(135deg, #DC2626, #9333EA, #1D4ED8);">
+                        <span class="art-placeholder-icon">✨</span>
+                        <span class="art-placeholder-label">Your artwork here</span>
+                    </div>
+                    <div class="art-card-body">
+                        <span class="art-badge originals">Original</span>
+                        <h3>Untitled No. 4</h3>
+                        <p class="art-medium">Watercolor on paper</p>
+                        <p class="art-desc">One-of-a-kind original. Ships with a certificate of authenticity and artist's note.</p>
+                        <div class="art-footer">
+                            <span class="art-price">Inquire for price</span>
+                            <button class="art-inquire-btn" onclick="openArtInquiry('Untitled No. 4 — Original')">Inquire</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div><!-- end art-grid -->
+
+            <!-- Commission CTA banner -->
+            <div class="shop-cta">
+                <div class="shop-cta-inner">
+                    <h3>Don't see what you're looking for?</h3>
+                    <p>Commission an original piece made just for you. Every vision deserves to be made real.</p>
+                    <button class="btn btn-primary" onclick="openArtInquiry('Custom Commission')">Commission a Piece</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Art Shop Inquiry Modal -->
+    <div class="pricing-modal" id="artshopModal">
+        <div class="pricing-content art-inquiry-modal-content">
+            <button class="modal-close" onclick="closeArtInquiry()" aria-label="Close">&#215;</button>
+            <h2>Request &amp; Inquire</h2>
+            <p class="subtitle">Tell me what you're interested in and I'll be in touch within 2–3 business days.</p>
+            <form class="art-inquiry-form" id="artInquiryForm" onsubmit="submitArtInquiry(event)">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="inquiry-name">Your Name <span aria-hidden="true">*</span></label>
+                        <input type="text" id="inquiry-name" placeholder="Your name" required autocomplete="name">
+                    </div>
+                    <div class="form-group">
+                        <label for="inquiry-email">Your Email <span aria-hidden="true">*</span></label>
+                        <input type="email" id="inquiry-email" placeholder="your@email.com" required autocomplete="email">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="inquiry-interest">I'm interested in&hellip;</label>
+                        <select id="inquiry-interest">
+                            <option value="Print">A Print</option>
+                            <option value="Original">An Original Piece</option>
+                            <option value="Commission">A Custom Commission</option>
+                            <option value="Accessory">An Accessory</option>
+                            <option value="Multiple items">Multiple Items</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="inquiry-item">Specific piece (optional)</label>
+                        <input type="text" id="inquiry-item" placeholder="e.g. Untitled No. 1, or describe the vibe">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inquiry-message">Tell me about your vision <span aria-hidden="true">*</span></label>
+                    <textarea id="inquiry-message" rows="5" placeholder="What are you envisioning? Any size preferences, color palette, timeline, or budget?" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary art-submit-btn">Send Inquiry ✉</button>
+            </form>
+        </div>
+    </div>
+
     <!-- Testimonials Section -->
     <section id="testimonials" class="testimonials">
         <div class="container">
@@ -1662,6 +1848,7 @@
                 <a href="#services">Services</a>
                 <a href="#journey">My Professional Experience</a>
                 <a href="#portfolio">Portfolio</a>
+                <a href="#artshop">Art Shop</a>
                 <a href="#testimonials">Testimonials</a>
                 <a href="#contact">Contact</a>
             </div>
@@ -1680,6 +1867,7 @@
         <button onclick="openPricing('special-education')" class="mobile-cta-btn mcb-sped">🎓 SpEd</button>
         <button onclick="openPricing('instructional')" class="mobile-cta-btn mcb-id">📚 Instructional</button>
         <button onclick="openPricing('tarot')" class="mobile-cta-btn mcb-tarot">🔮 Tarot</button>
+        <button onclick="document.getElementById('artshop').scrollIntoView({behavior:'smooth'})" class="mobile-cta-btn mcb-art">🎨 Art Shop</button>
     </div>
 
     <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
@@ -1782,6 +1970,57 @@
                 });
             }
         }
+
+        // ── Art Shop ──────────────────────────────────────────────────────────
+        function openArtInquiry(item) {
+            if (item) document.getElementById('inquiry-item').value = item;
+            document.getElementById('artshopModal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeArtInquiry() {
+            document.getElementById('artshopModal').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        function submitArtInquiry(e) {
+            e.preventDefault();
+            const name    = document.getElementById('inquiry-name').value.trim();
+            const email   = document.getElementById('inquiry-email').value.trim();
+            const interest = document.getElementById('inquiry-interest').value;
+            const item    = document.getElementById('inquiry-item').value.trim();
+            const message = document.getElementById('inquiry-message').value.trim();
+
+            const subject = encodeURIComponent(
+                'Art Shop Inquiry: ' + interest + (item ? ' — ' + item : '')
+            );
+            const body = encodeURIComponent(
+                'Hi Alexandra,\n\n' +
+                'I\'m interested in: ' + interest + '\n' +
+                (item ? 'Specific piece / request: ' + item + '\n' : '') +
+                '\nMessage:\n' + message + '\n\n' +
+                '---\nFrom: ' + name + '\nReply to: ' + email
+            );
+
+            window.location.href = 'mailto:alexsimone.gordon@gmail.com?subject=' + subject + '&body=' + body;
+            closeArtInquiry();
+        }
+
+        // Art Shop category filter
+        document.querySelectorAll('.shop-cat-btn').forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.shop-cat-btn').forEach(function(b) { b.classList.remove('active'); });
+                this.classList.add('active');
+                var cat = this.dataset.cat;
+                document.querySelectorAll('.art-card').forEach(function(card) {
+                    if (cat === 'all' || card.dataset.cat === cat) {
+                        card.classList.remove('hidden');
+                    } else {
+                        card.classList.add('hidden');
+                    }
+                });
+            });
+        });
 
         // Smooth scroll for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
